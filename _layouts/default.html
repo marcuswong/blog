@@ -40,7 +40,7 @@
 
       <h1>Latest Post</h1>
       {% for post in site.posts limit:1 %}
-          <a href="{{ post.url }}">
+          <a href="{{ site.baseurl }}/{{ post.url }}">
           <h3>{{ post.title }} - {{ post.date | date: "%d %B %Y" }}</h3>
           {% comment %} <p class="blogdate">{{ post.date | date: "%d %B %Y" }}</p> {% endcomment %}
           {% comment %} <div>{{ post.content |truncatehtml | truncatewords: 60 }}</div> {% endcomment %}
